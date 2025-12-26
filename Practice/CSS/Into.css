@@ -1,0 +1,74 @@
+p{
+    color: blue;
+    font-size: 15px;
+}
+
+
+
+#title{color: red;
+}
+
+
+/*  *{}  */
+
+
+.box{
+    border: 1px solid greenyellow;
+}
+
+
+
+p{
+    color: magenta;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+p{
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+div{
+    padding: 10px;
+
+}
+
+
+body{
+    backgroud-color: lightgrey;
+}
+
+p{
+    color:aquamarine
+}
+
+
+div{
+    border: 2px solid skyblue;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+p{
+    display: block;
+}
+
+span{
+    display:inline;
+}
+
+div{
+    position: relative;
+}
+
+
+img{
+    float: left;
+}

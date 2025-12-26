@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>
+            Login Remember Me
+        </title>
+    </head>
+
+    <body>
+
+        <input type="checkbox" onclick="remember()"> Remember Me
+
+        <script>
+            function remember(){
+                localStorage.setItem("remember", "yes");
+            }
+        </script>
+    </body>
+</html>

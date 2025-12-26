@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geolocation API</title>
+</head>
+
+<body>
+
+    <h2>Get Your Location</h2>
+    <button onclick="getLoc()">Get Location</button>
+ 
+<script>
+function getLoc() {
+  navigator.geolocation.getCurrentPosition(
+    pos => alert(pos.coords.latitude)
+  );
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GeoLocation API</title>
+</head>
+
+<body>
+
+    <button onclick="getLoc()">Get Location</button>
+
+    <script>
+        function getLoc() {
+            navigator.geolocation.getCurrentPosition(
+                function(pos) {
+                    alert("Latitude: " + pos.coords.latitude +
+                          "\nLongitude: " + pos.coords.longitude);
+                },
+                function(error) {
+                    alert("Location access denied!");
+                }
+            );
+        }
+    </script>
+
+</body>
+</html>

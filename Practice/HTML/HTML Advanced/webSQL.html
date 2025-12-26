@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSQL</title>
+</head>
+
+<body>
+    <h2>WebSQL Example</h2>
+
+    <script>
+        // Open database
+        var db = openDatabase("test", "1.0", "Test DB", 2 * 1024 * 1024);
+
+        // Create table
+        db.transaction(function (tx) {
+            tx.executeSql(
+                "CREATE TABLE IF NOT EXISTS demo (id INTEGER UNIQUE, text TEXT)"
+            );
+        });
+
+        alert("Database and table created successfully");
+    </script>
+
+</body>
+</html>
