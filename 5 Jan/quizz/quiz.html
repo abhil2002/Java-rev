@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wayground Style Quiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>Web Quiz</h2>
+  <div id="timer">⏱ 60</div>
+</header>
+
+<div class="progress">
+  <div id="progressBar"></div>
+</div>
+
+<div class="quiz-card" id="quizBox">
+  <h3 id="question"></h3>
+  <div class="options" id="options"></div>
+  <button class="next" onclick="nextQ()">Next</button>
+</div>
+
+<div class="result-card hidden" id="resultBox">
+  <h2>Quiz Result 🎉</h2>
+  <p>Total Questions: <span id="tq"></span></p>
+  <p>Attempted: <span id="attempted"></span></p>
+  <p>Unattempted: <span id="unattempted"></span></p>
+  <p>Correct: <span id="correct"></span></p>
+  <p>Wrong: <span id="wrong"></span></p>
+  <h3>Score: <span id="score"></span>%</h3>
+</div>
+
+<script src="script.js">
+    if(!localStorage.getItem("user")){
+  window.location.href="login.html";
+}
+
+</script>
+</body>
+</html>
