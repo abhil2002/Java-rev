@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery All in One</title>
+
+    <!-- jQuery CDN (MANDATORY) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #box {
+            width: 200px;
+            height: 100px;
+            background: lightblue;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        .active {
+            background: black;
+            color: white;
+        }
+
+        button {
+            margin: 5px 0;
+            padding: 6px 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 id="title">jQuery All Methods Demo</h2>
+
+    <!-- Buttons -->
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn">Show</button>
+    <button id="toggleBtn">Toggle</button>
+    <button id="cssBtn">Change CSS</button>
+    <button id="classBtn">Toggle Class</button>
+    <button id="appendBtn">Append Text</button>
+    <button id="fadeBtn">Fade Out</button>
+    <button id="slideBtn">Slide Up</button>
+
+    <br><br>
+
+    <!-- Input -->
+    <input type="text" id="name" placeholder="Enter your name">
+    <button id="valBtn">Get Value</button>
+
+    <!-- Box -->
+    <div id="box">
+        <p id="text">Hello jQuery</p>
+    </div>
+
+    <br>
+
+    <!-- Form -->
+    <form id="myForm">
+        <input type="text" id="email" placeholder="Enter email">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        /* ===============================
+           DOCUMENT READY
+        =============================== */
+        $(function () {
+
+            /* ===============================
+               EVENTS
+            =============================== */
+
+            $("#hideBtn").click(function () {
+                $("#box").hide();
+            });
+
+            $("#showBtn").click(function () {
+                $("#box").show();
+            });
+
+            $("#toggleBtn").click(function () {
+                $("#box").toggle();
+            });
+
+            $("#cssBtn").click(function () {
+                $("#box").css({
+                    backgroundColor: "green",
+                    color: "white"
+                });
+            });
+
+            $("#classBtn").click(function () {
+                $("#box").toggleClass("active");
+            });
+
+            $("#appendBtn").click(function () {
+                $("#box").append("<p>Appended Text</p>");
+            });
+
+            $("#fadeBtn").click(function () {
+                $("#box").fadeOut(1000);
+            });
+
+            $("#slideBtn").click(function () {
+                $("#box").slideUp();
+            });
+
+            /* ===============================
+               TEXT / HTML
+            =============================== */
+
+            $("#title").dblclick(function () {
+                $(this).text("Title Changed!");
+            });
+
+            /* ===============================
+               INPUT VALUE
+            =============================== */
+
+            $("#valBtn").click(function () {
+                let name = $("#name").val();
+                alert("You entered: " + name);
+            });
+
+            /* ===============================
+               KEYBOARD EVENT
+            =============================== */
+
+            $("#name").keyup(function () {
+                $("#text").text($(this).val());
+            });
+
+            /* ===============================
+               FORM SUBMIT
+            =============================== */
+
+            $("#myForm").submit(function (e) {
+                e.preventDefault(); // stop page reload
+                alert("Form Submitted!");
+            });
+
+            /* ===============================
+               AJAX (DEMO)
+            =============================== */
+
+            /*
+            $.ajax({
+                url: "/api/data",
+                method: "GET",
+                success: function (res) {
+                    console.log(res);
+                }
+            });
+            */
+
+        });
+    </script>
+
+</body>
+</html>

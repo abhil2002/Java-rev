@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flex Newspaper</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #555;
+        }
+
+        /* container holding all pages */
+        .newspaper {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* single newspaper page */
+        .page {
+            width: 280px;
+            background: white;
+            padding: 15px;
+        }
+
+        .title {
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 2px solid black;
+            padding-bottom: 5px;
+        }
+
+        .image {
+            height: 150px;
+            background: #ccc;
+            margin: 10px 0;
+        }
+
+        .headline {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .content {
+            font-size: 12px;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="newspaper">
+
+    <div class="page">
+        <div class="title">THE NEWSPAPER</div>
+        <div class="image"></div>
+        <div class="headline">Big City Housing Project</div>
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Quidem modi recusandae quia.
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="title">THE NEWSPAPER</div>
+        <div class="image"></div>
+        <div class="headline">Metro Travel Update</div>
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Voluptatum eligendi.
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="title">THE NEWSPAPER</div>
+        <div class="image"></div>
+        <div class="headline">Night Street Report</div>
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Eveniet deserunt.
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

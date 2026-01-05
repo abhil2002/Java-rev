@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flex Newspaper</title>
+
+<style>
+body{
+    margin:0;
+    padding:30px;
+    background:#555;
+    font-family:"Times New Roman", serif;
+}
+
+.newspaper-container{
+    display:flex;
+    gap:12.5px;
+    justify-content:center;
+}
+
+.page{
+    width:420px;
+    height:620px;
+    background:#fff;
+    padding:18px;
+    display:flex;
+    flex-direction:column;
+    border:1px solid #aaa;
+}
+
+/* masthead */
+.masthead{
+    text-align:center;
+    border-top:3px solid black;
+    border-bottom:3px solid black;
+    padding:6px 0;
+}
+
+.masthead h1{
+    margin:0;
+    font-size:30px;
+    letter-spacing:3px;
+}
+
+/* date */
+.date-line{
+    text-align:center;
+    font-size:11px;
+    margin:6px 0;
+}
+
+/* image */
+.main-image img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+    border:1px solid #999;
+}
+
+.caption{
+    font-size:10px;
+    text-align:center;
+    color:#444;
+    margin:4px 0 8px 0;
+}
+
+/* headline */
+.headline{
+    font-size:19px;
+    font-weight:bold;
+    text-transform:uppercase;
+    margin-bottom:8px;
+}
+
+/* divider */
+.divider{
+    border-top:1px solid #000;
+    margin:8px 0;
+}
+
+/* article */
+.article{
+    display:flex;
+    gap:12px;
+    font-size:12px;
+    text-align:justify;
+    line-height:1.4;
+}
+
+.col{
+    flex:1;
+}
+</style>
+</head>
+
+<body>
+
+<div class="newspaper-container">
+
+    <!-- PAGE 1 -->
+    <div class="page">
+        <div class="masthead">
+            <h1>THE DAILY NEWS</h1>
+        </div>
+
+        <div class="date-line">
+            Monday, 27 January 2025 | Nature Edition
+        </div>
+
+        <div class="main-image">
+            <img src="nature.jpg" alt="Forest">
+        </div>
+        <div class="caption">Sunlight filters through a dense forest</div>
+
+        <div class="headline">
+            Forest Conservation Gains Global Attention
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="article">
+            <div class="col">
+                Conservation efforts are increasing worldwide as
+                forests continue to play a vital role in climate balance.
+            </div>
+            <div class="col">
+                Environmentalists stress urgent action to protect
+                biodiversity and natural habitats.
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="page">
+        <div class="masthead">
+            <h1>THE DAILY NEWS</h1>
+        </div>
+
+        <div class="date-line">
+            Monday, 27 January 2025 | Wildlife
+        </div>
+
+        <div class="main-image">
+            <img src="fox.jpg" alt="Fox">
+        </div>
+        <div class="caption">Young foxes spotted near forest edge</div>
+
+        <div class="headline">
+            Wildlife Sightings Increase Near Human Areas
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="article">
+            <div class="col">
+                Fox populations are adapting quickly to changing
+                environments and human expansion.
+            </div>
+            <div class="col">
+                Experts advise caution while appreciating
+                wildlife from a safe distance.
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div class="page">
+        <div class="masthead">
+            <h1>THE DAILY NEWS</h1>
+        </div>
+
+        <div class="date-line">
+            Monday, 27 January 2025 | Wildlife Special
+        </div>
+
+        <div class="main-image">
+            <img src="monkey.png" alt="Monkey">
+        </div>
+        <div class="caption">Mother monkey carries infant across rope</div>
+
+        <div class="headline">
+            Animal Behavior Shows Strong Family Bonds
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="article">
+            <div class="col">
+                Studies reveal complex social structures
+                and nurturing behavior among primates.
+            </div>
+            <div class="col">
+                Such observations help scientists better
+                understand animal intelligence.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Abhishek | Portfolio</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    /* HERO */
+    .hero {
+        height: 100vh;
+        background: linear-gradient(120deg, #4f46e5, #0ea5e9);
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero h1 span {
+        color: #ffd700;
+    }
+
+    /* SECTION */
+    section {
+        padding: 80px 0;
+    }
+
+    /* CARD HOVER */
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    /* SKILLS */
+    .skill-badge {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    /* FOOTER */
+    footer {
+        background: #111827;
+        color: #9ca3af;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Abhishek</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<div class="hero text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold">
+            Hi, I'm <span>Abhishek</span>
+        </h1>
+        <p class="lead mt-3">
+            Java Full Stack Developer | Spring Boot | Bootstrap
+        </p>
+        <a href="#projects" class="btn btn-warning btn-lg mt-4">View My Work</a>
+    </div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="fw-bold">About Me</h2>
+                <p class="text-muted mt-3">
+                    I am a passionate Java Full Stack Developer with strong fundamentals
+                    in Java, Spring Boot, REST APIs, SQL, HTML, CSS, JavaScript and Bootstrap.
+                    I love building clean, scalable and user-friendly applications.
+                </p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="https://via.placeholder.com/300"
+                     class="img-fluid rounded-circle shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="bg-light">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-4">Skills</h2>
+        <span class="badge bg-primary skill-badge">Java</span>
+        <span class="badge bg-secondary skill-badge">Spring Boot</span>
+        <span class="badge bg-success skill-badge">HTML</span>
+        <span class="badge bg-danger skill-badge">CSS</span>
+        <span class="badge bg-warning text-dark skill-badge">JavaScript</span>
+        <span class="badge bg-info text-dark skill-badge">Bootstrap</span>
+        <span class="badge bg-dark skill-badge">SQL</span>
+    </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+    <div class="container">
+        <h2 class="fw-bold text-center mb-5">Projects</h2>
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Library Management System</h5>
+                        <p class="card-text text-muted">
+                            REST API using Spring Boot, JPA, MySQL with JWT authentication.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Portfolio Website</h5>
+                        <p class="card-text text-muted">
+                            Responsive portfolio built using HTML, CSS, Bootstrap.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Employee CRUD App</h5>
+                        <p class="card-text text-muted">
+                            Full stack CRUD application with Spring Boot and React.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="bg-light">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-4">Contact Me</h2>
+        <p class="text-muted">abhisheklawhale04012002@gmail.com</p>
+        <a class="btn btn-primary me-2">LinkedIn</a>
+        <a class="btn btn-dark">GitHub</a>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="text-center py-3">
+    © 2026 Abhishek Lawhale. All rights reserved.
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

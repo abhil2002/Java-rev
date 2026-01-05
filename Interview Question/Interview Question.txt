@@ -1,0 +1,3 @@
+he default scope for variables declared outside of any function or code block is Global Scope. This applies
+hether you use var, let, or const.
+

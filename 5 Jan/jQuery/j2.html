@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Single File</title>
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+    }
+
+    .box {
+        font-size: 22px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+<button id="btn">Click Me</button>
+
+<div class="box">This text will turn RED</div>
+<p id ="text"> Hello</p>
+
+<script>
+$(document).ready(function () {
+    $("#btn").click(function () {
+        $(".box").css("color", "red");
+       
+    });
+});
+
+// $(document).ready(function () {
+//     $("#btn").click(function () {
+//         $(".box").hide();
+//     });
+// });
+// >
+
+$document.ready(function(){
+    $("#btn").click(function(){
+        alert("Button clicked! ");
+    });
+})
+$document.ready(function(){
+    $("text").hide();
+})
+
+
+</script>
+
+</body>
+</html>

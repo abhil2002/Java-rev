@@ -1,16 +1,24 @@
-package com.example.library.dto;
-import jakarta.validation.constraints.NotBlank;
+package com.example.library.entity;
+import jakarta.persistence.*;
 
-public class BookDTO {
+@Entity
+public class Book {
 
-    @NotBlank
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String title;
-
-    @NotBlank
     private String author;
-
-    @NotBlank
     private String isbn;
+
+    public Long getId(){
+        return id;
+    }
+    public void setId(Long id){
+        this.id = id;
+    }
+
 
     public String getTitle(){
         return title;
@@ -27,10 +35,13 @@ public class BookDTO {
         this.author = author;
     }
 
+
     public String getIsbn(){
         return isbn;
     }
     public void setIsbn(String isbn){
         this.isbn = isbn;
     }
+
+
 }

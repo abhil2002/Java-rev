@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Display Cities using jQuery</title>
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+    }
+
+    button {
+        padding: 8px 15px;
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        background: #f1f1f1;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 5px;
+    }
+</style>
+</head>
+
+<body>
+
+<h2>City Names</h2>
+
+<button id="showCities">Show Cities</button>
+
+<ul id="cityList"></ul>
+
+<script>
+$(document).ready(function () {
+
+    
+    var cities = ["Pune", "Mumbai", "Delhi", "Bangalore", "Hyderabad", "Chennai"];
+
+    $("#showCities").click(function () {
+
+        $("#cityList").empty(); 
+
+        
+        $.each(cities, function (index, city) {
+            $("#cityList").append("<li>" + city + "</li>");
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>
