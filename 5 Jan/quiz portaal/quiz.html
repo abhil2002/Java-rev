@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="quiz-header">
+    <h2>JavaScript Quiz</h2>
+    <div class="timer">⏱ <span id="time">60</span>s</div>
+</header>
+
+<div class="status-bar">
+    <div>Attempted: <span id="attempted">0</span></div>
+    <div>Answered: <span id="answered">0</span></div>
+    <div>Unanswered: <span id="unanswered">5</span></div>
+</div>
+
+<div class="quiz-container">
+    <h3 id="question"></h3>
+
+    <ul id="options">
+        <!-- Options injected by JS -->
+    </ul>
+
+    <button id="nextBtn">Next</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
