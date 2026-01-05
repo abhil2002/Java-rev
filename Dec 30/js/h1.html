@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+
+    <script>
+        function welcomeMessage(a, b) {
+            alert("Welcome to Exercise 1!");
+            console.log("clicked the button");
+            return a + b;
+        }
+
+        function calculateSum() {
+            let num1 = Number(document.getElementById("n1").value);
+            let num2 = Number(document.getElementById("n2").value);
+
+            let result = welcomeMessage(num1, num2);
+            alert("Sum is: " + result);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Welcome to Exercise 1</h1>
+    <p>This is a simple HTML document for Exercise 1.</p>
+
+    <input type="number" id="n1" placeholder="First Number">
+    <input type="number" id="n2" placeholder="Second Number">
+
+    <br><br>
+    <button onclick="calculateSum()">Click Me</button>
+</body>
+</html>

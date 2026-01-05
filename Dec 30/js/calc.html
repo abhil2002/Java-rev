@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        body{
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+    </style>
+</head>
+<body>
+    <h1> Calculator</h1>
+    <input type = "number" id ="n1" placeholder ="Enter first no">
+    <br><br>
+
+    <input type ="number" id ="n2" placeholder ="enter 2 no : ">
+    <br><br>
+
+    <button onclick ="add()"> Add </button>
+    <button onclick ="subtract()"> Subtract</button>
+    <button onclick ="multiply()"> Multiply</button>
+    <button onclick ="divide()"> Divide</button>
+    <br><br>
+
+    <h3 id ="result"> Result: </h3>
+
+    <script>
+
+        function add(){
+            let a = Number(document.getElementById("n1").value);
+            let b = Number(document.getElementById("n2").value);
+            document.getElementById("result").innerText ="Result : "+(a+b);
+        }
+
+        function subtract(){
+            let a = Number(document.getElementById("n1").value);
+            let b = Number(document.getElementById("n2").value);
+            document.getElementById("result").innerText = "Result : "+(a-b);
+        }
+
+        function multiply(){
+            let a = Number(document.getElementById("n1").value);
+            let b = Number(document.getElementById("n2").value);
+            document.getElementById("result").innerText = "result : "+(a*b);
+        }
+
+        function divide() {
+            let a = Number(document.getElementById("n1").value);
+            let b = Number(document.getElementById("n2").value);
+        if (b === 0) {
+        alert("Cannot divide by zero");
+        } else {
+            document.getElementById("result").innerText = "Result: " + (a / b);
+        }
+    }
+
+
+    </script>
+    
+</body>
+</html>

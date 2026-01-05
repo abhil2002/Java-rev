@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz App</title>
+
+<style>
+/* ================= GLOBAL ================= */
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #ffffff;   /* PURE WHITE BODY */
+    color: #2f4f2f;
+}
+
+/* ================= HEADER ================= */
+header {
+    padding: 20px;
+    text-align: center;
+    background: #6bbf6b;
+    color: #ffffff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+/* ================= MAIN ================= */
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ================= QUIZ CARD ================= */
+.quiz-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e0e0;
+}
+
+/* ================= PROGRESS ================= */
+.progress {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #4d7c4d;
+}
+
+/* ================= QUESTION ================= */
+.question-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    border: 1px solid #dcdcdc;
+}
+
+.question-box h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #245c24;
+}
+
+/* ================= OPTIONS ================= */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.option {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 14px 16px;
+    border: 1px solid #dcdcdc;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.option input {
+    accent-color: #5fbf5f;
+}
+
+.option:hover {
+    border-color: #6bbf6b;
+    background: #f7fff7;
+}
+
+.option:has(input:checked) {
+    border-color: #5fbf5f;
+    background: #f0fff0;
+}
+
+/* ================= SUBMIT BUTTON ================= */
+.submit-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.btn-submit {
+    padding: 16px 44px;
+    font-size: 18px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    background: #6bbf6b;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #5aa85a;
+    transform: translateY(-2px);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: #6b8f6b;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    .question-box h2 {
+        font-size: 18px;
+    }
+
+    .quiz-card {
+        padding: 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌿 Online Quiz</h1>
+    <p>Test your HTML & CSS knowledge</p>
+</header>
+
+<main>
+
+    <div class="quiz-card">
+        <div class="progress">Question 1 of 5</div>
+        <div class="question-box">
+            <h2>Which language is primarily used for web development?</h2>
+        </div>
+        <div class="options">
+            <label class="option"><input type="radio" name="q1"> Java</label>
+            <label class="option"><input type="radio" name="q1"> Python</label>
+            <label class="option"><input type="radio" name="q1"> JavaScript</label>
+            <label class="option"><input type="radio" name="q1"> C++</label>
+        </div>
+    </div>
+
+    <div class="quiz-card">
+        <div class="progress">Question 2 of 5</div>
+        <div class="question-box">
+            <h2>What does HTML stand for?</h2>
+        </div>
+        <div class="options">
+            <label class="option"><input type="radio" name="q2"> Hyper Text Markup Language</label>
+            <label class="option"><input type="radio" name="q2"> High Text Machine Language</label>
+            <label class="option"><input type="radio" name="q2"> Hyperlinks and Text Markup Language</label>
+            <label class="option"><input type="radio" name="q2"> Home Tool Markup Language</label>
+        </div>
+    </div>
+
+    <div class="quiz-card">
+        <div class="progress">Question 3 of 5</div>
+        <div class="question-box">
+            <h2>What does CSS stand for?</h2>
+        </div>
+        <div class="options">
+            <label class="option"><input type="radio" name="q3"> Colorful Style Sheets</label>
+            <label class="option"><input type="radio" name="q3"> Cascading Style Sheets</label>
+            <label class="option"><input type="radio" name="q3"> Creative Style Sheets</label>
+            <label class="option"><input type="radio" name="q3"> Computer Style Sheets</label>
+        </div>
+    </div>
+
+    <div class="quiz-card">
+        <div class="progress">Question 4 of 5</div>
+        <div class="question-box">
+            <h2>Which HTML tag is used to create a hyperlink?</h2>
+        </div>
+        <div class="options">
+            <label class="option"><input type="radio" name="q4"> &lt;link&gt;</label>
+            <label class="option"><input type="radio" name="q4"> &lt;a&gt;</label>
+            <label class="option"><input type="radio" name="q4"> &lt;href&gt;</label>
+            <label class="option"><input type="radio" name="q4"> &lt;url&gt;</label>
+        </div>
+    </div>
+
+    <div class="quiz-card">
+        <div class="progress">Question 5 of 5</div>
+        <div class="question-box">
+            <h2>Which is the correct CSS syntax?</h2>
+        </div>
+        <div class="options">
+            <label class="option"><input type="radio" name="q5"> body:color=black;</label>
+            <label class="option"><input type="radio" name="q5"> {body;color:black;}</label>
+            <label class="option"><input type="radio" name="q5"> body { color: black; }</label>
+            <label class="option"><input type="radio" name="q5"> body = color:black;</label>
+        </div>
+    </div>
+
+    <!-- SUBMIT BUTTON -->
+    <div class="submit-container">
+        <button class="btn-submit">Submit Quiz</button>
+    </div>
+
+</main>
+
+<footer>
+    © 2026 Quiz Platform • Designed with ❤️
+</footer>
+
+</body>
+</html>

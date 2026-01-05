@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy New Year Card</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Card */
+.card {
+    width: 320px;
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Snow animation */
+.card::before {
+    content: "❄ ❅ ❆ ❄ ❅ ❆";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    font-size: 22px;
+    animation: snow 6s linear infinite;
+}
+
+@keyframes snow {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(350px); }
+}
+
+/* Santa */
+.santa {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+/* Text */
+h1 {
+    margin: 10px 0;
+    color: #b30000;
+}
+
+.year {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0b8457;
+}
+
+.message {
+    margin-top: 15px;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="santa">🎅</div>
+    <h1>Happy New Year!</h1>
+    <div class="year">2026 ✨</div>
+
+    <p class="message">
+        May this New Year bring you joy,<br>
+        success, good health, and endless happiness.<br>
+        Keep smiling and keep shining! 🌟
+    </p>
+
+    <div class="footer">
+        With warm wishes ❤️
+    </div>
+</div>
+
+</body>
+</html>
