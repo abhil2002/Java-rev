@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Result</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="quiz-body">
+
+<div class="result-container">
+
+  <!-- Score Card -->
+  <div class="result-card score-card">
+    <h2>Your Result</h2>
+    <div class="score-circle">
+  <div class="score-inner">
+    <span id="scorePercent">0%</span>
+    <small>Score</small>
+  </div>
+</div>
+
+    <p class="score-text">Overall Score</p>
+  </div>
+
+  <!-- Stats Card -->
+  <div class="result-card stats-card">
+    <h3>Quiz Summary</h3>
+
+    <div class="stats-grid">
+      <div class="stat">
+        <span>Total</span>
+        <b id="totalQ">0</b>
+      </div>
+      <div class="stat">
+        <span>Attempted</span>
+        <b id="attemptedQ">0</b>
+      </div>
+      <div class="stat correct">
+        <span>Correct</span>
+        <b id="correctQ">0</b>
+      </div>
+      <div class="stat wrong">
+        <span>Wrong</span>
+        <b id="wrongQ">0</b>
+      </div>
+      <div class="stat">
+        <span>Unattempted</span>
+        <b id="unattemptedQ">0</b>
+      </div>
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="result-actions">
+    <button class="primary" onclick="restart()">Retry Quiz</button>
+    <button class="secondary" onclick="logout()">Logout</button>
+  </div>
+
+</div>
+
+<script>
+  const data = JSON.parse(localStorage.getItem("quizResult"));
+
+  document.getElementById("scorePercent").innerText = data.scorePercent + "%";
+  document.getElementById("totalQ").innerText = data.total;
+  document.getElementById("attemptedQ").innerText = data.attempted;
+  document.getElementById("correctQ").innerText = data.correct;
+  document.getElementById("wrongQ").innerText = data.wrong;
+  document.getElementById("unattemptedQ").innerText = data.unattempted;
+
+  function restart() {
+    window.location.href = "quiz.html";
+  }
+
+  function logout() {
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>

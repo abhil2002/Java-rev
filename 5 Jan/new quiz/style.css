@@ -1,134 +1,174 @@
-/* ===== AUTH PAGES ===== */
-.center{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.auth-card{
-  background:white;
-  width:340px;
-  padding:35px;
-  border-radius:15px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.12);
-  animation:fade 0.5s;
-}
-
-.auth-card h2{
-  text-align:center;
-  margin-bottom:5px;
-}
-
-.sub{
-  text-align:center;
-  font-size:14px;
-  color:#666;
-  margin-bottom:20px;
-}
-
-.auth-card input{
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  border-radius:8px;
-  border:1px solid #ddd;
-  transition:0.3s;
-}
-
-.auth-card input:focus{
-  border-color:#6366f1;
-  outline:none;
-  box-shadow:0 0 0 2px #e0e7ff;
-}
-
-.auth-card button{
-  width:100%;
-  padding:12px;
-  margin-top:10px;
-  background:linear-gradient(135deg,#667eea,#764ba2);
-  color:white;
-  border:none;
-  border-radius:8px;
-  font-size:16px;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.auth-card button:hover{
-  transform:translateY(-2px);
-}
-
-.switch{
-  text-align:center;
-  margin-top:15px;
+/* ================= RESET & BASE ================= */
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
   background: #f6f8fc;
+  color: #1e293b;
 }
 
+/* ================= CENTER HELPER ================= */
 .center {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
-.card {
+/* ================= AUTH (LOGIN / SIGNUP) ================= */
+.auth-card {
   background: white;
-  padding: 30px;
-  width: 320px;
-  border-radius: 12px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  width: 340px;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  animation: fade 0.5s ease;
 }
 
-.card h2 {
+.auth-card h2 {
   text-align: center;
+  margin-bottom: 5px;
 }
 
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+.sub {
+  text-align: center;
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 20px;
 }
 
-button {
+.auth-card input {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(135deg,#4facfe,#00f2fe);
-  border: none;
-  color: white;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.3s;
 }
 
+.auth-card input:focus {
+  border-color: #6366f1;
+  outline: none;
+  box-shadow: 0 0 0 2px #e0e7ff;
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(135deg,#667eea,#764ba2);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-card button:hover {
+  transform: translateY(-2px);
+}
+
+.switch {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.switch a {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ================= HEADER ================= */
 header {
   background: linear-gradient(135deg,#667eea,#764ba2);
   color: white;
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
+/* ================= QUIZ CARD ================= */
 .quiz-card {
   max-width: 600px;
   background: white;
   margin: 40px auto;
   padding: 30px;
   border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  animation: fade 0.4s ease;
 }
 
+.quiz-card h3 {
+  margin-top: 0;
+}
+
+/* ================= OPTIONS ================= */
 .options button {
   width: 100%;
-  margin: 8px 0;
+  margin: 10px 0;
+  padding: 12px;
   background: #eef2ff;
-  color: black;
+  color: #1e293b;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
+/* 👉 HOVER EFFECT (MAIN FEATURE) */
+.options button:hover {
+  background: #dbeafe;
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 8px 18px rgba(99,102,241,0.25);
+}
+
+/* 👉 SELECTED STATE */
+.options button.selected {
+  border: 2px solid #6366f1;
+  background: #e0e7ff;
+}
+
+/* 👉 CORRECT ANSWER */
+.options button.correct {
+  background: #22c55e !important;
+  color: white;
+  box-shadow: 0 6px 18px rgba(34,197,94,0.4);
+}
+
+/* 👉 WRONG ANSWER */
+.options button.wrong {
+  background: #ef4444 !important;
+  color: white;
+  box-shadow: 0 6px 18px rgba(239,68,68,0.4);
+}
+
+/* ================= NEXT BUTTON ================= */
+button.next {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: linear-gradient(135deg,#4facfe,#00f2fe);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button.next:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= PROGRESS BAR ================= */
 .progress {
   height: 8px;
   background: #ddd;
@@ -138,4 +178,22 @@ header {
   height: 100%;
   width: 0%;
   background: #4facfe;
+  transition: width 0.3s ease;
+}
+
+/* ================= UTILITIES ================= */
+.hidden {
+  display: none;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
