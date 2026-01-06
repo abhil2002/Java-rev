@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="quiz-body">
+
+<!-- ===== HEADER ===== -->
+<header class="quiz-header">
+  <h1>Web Development Quiz</h1>
+  <div id="timer" class="timer">⏱ 60s</div>
+</header>
+
+<!-- ===== PROGRESS BAR ===== -->
+<div class="progress-container">
+  <div id="progressBar" class="progress-bar"></div>
+</div>
+
+<!-- ===== QUIZ CARD ===== -->
+<div class="quiz-card">
+
+  <!-- Question -->
+  <h3 id="question" class="question animate-question"></h3>
+
+  <!-- Options -->
+  <div class="options" id="options"></div>
+
+  <!-- Actions -->
+  <div class="actions">
+    <button id="nextBtn" onclick="nextQ()">Next Question</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
